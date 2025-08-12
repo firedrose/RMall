@@ -1,162 +1,60 @@
-11:09:08:006  INFO 23304 --- [main] com.rmall.pay.PayApplication             : Starting PayApplication using Java 11.0.15.1 on LAPTOP-2ESIKEL8 with PID 23304 (D:\Develop\SpringCloud\rmall\pay-service\target\classes started by 86185 in D:\Develop\SpringCloud\rmall)
-11:09:08:021 DEBUG 23304 --- [main] com.rmall.pay.PayApplication             : Running with Spring Boot v2.7.12, Spring v5.3.27
-11:09:08:022  INFO 23304 --- [main] com.rmall.pay.PayApplication             : The following 1 profile is active: "rem"
-11:09:11:112  INFO 23304 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b5382b4d-f9e3-3a26-9ecd-3bcdbf782a38
-11:09:11:966  INFO 23304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8086 (http)
-11:09:11:988  INFO 23304 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-11:09:11:988  INFO 23304 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.75]
-11:09:12:462  INFO 23304 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-11:09:12:462  INFO 23304 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4220 ms
-11:09:13:004  INFO 23304 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'user-service' URL not provided. Will try picking an instance via load-balancing.
-11:09:13:128  INFO 23304 --- [main] o.s.c.openfeign.FeignClientFactoryBean   : For 'trade-service' URL not provided. Will try picking an instance via load-balancing.
-11:09:18:289  INFO 23304 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-11:09:18:332  INFO 23304 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-11:09:20:350  INFO 23304 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-11:09:20:785  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [RpcClientFactory] create a new rpc client of 45001896-7aeb-4994-bb83-f8ac65ad7cef
-11:09:20:916  INFO 23304 --- [main] org.reflections.Reflections              : Reflections took 65 ms to scan 1 urls, producing 3 keys and 6 values 
-11:09:20:976  INFO 23304 --- [main] org.reflections.Reflections              : Reflections took 15 ms to scan 1 urls, producing 4 keys and 9 values 
-11:09:20:994  INFO 23304 --- [main] org.reflections.Reflections              : Reflections took 10 ms to scan 1 urls, producing 3 keys and 10 values 
-11:09:21:003  WARN 23304 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-11:09:21:017  INFO 23304 --- [main] org.reflections.Reflections              : Reflections took 14 ms to scan 1 urls, producing 1 keys and 5 values 
-11:09:21:034  INFO 23304 --- [main] org.reflections.Reflections              : Reflections took 12 ms to scan 1 urls, producing 1 keys and 7 values 
-11:09:21:073  INFO 23304 --- [main] org.reflections.Reflections              : Reflections took 29 ms to scan 1 urls, producing 2 keys and 8 values 
-11:09:21:087  WARN 23304 --- [main] org.reflections.Reflections              : given scan urls are empty. set urls in the configuration
-11:09:21:089  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] RpcClient init label, labels = {module=naming, source=sdk}
-11:09:21:095  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
-11:09:21:096  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
-11:09:21:097  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
-11:09:21:101  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Try to connect to server on start up, server: {serverIp = '192.168.93.133', server main port = 8848}
-11:09:26:502 ERROR 23304 --- [main] c.a.n.c.remote.client.grpc.GrpcClient    : Server check fail, please check server 192.168.93.133 ,port 9848 is available , error ={}
+03:19:45:517 ERROR 17860 --- [nacos-grpc-client-executor-19409] c.a.n.c.remote.client.grpc.GrpcClient    : [1753624894077_192.168.93.1_59131]Request stream error, switch server,error={}
 
-java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 9 milliseconds, 650900 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@564d3940[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@66abc325, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@39403943, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@1c5fd813}}}}}]]
-	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.start(NamingGrpcClientProxy.java:96) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.<init>(NamingGrpcClientProxy.java:89) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.<init>(NamingClientProxyDelegate.java:76) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.NacosNamingService.init(NacosNamingService.java:95) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.NacosNamingService.<init>(NacosNamingService.java:81) ~[nacos-client-2.0.4.jar:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
-	at com.alibaba.nacos.api.naming.NamingFactory.createNamingService(NamingFactory.java:59) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.api.NacosFactory.createNamingService(NacosFactory.java:77) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.cloud.nacos.NacosServiceManager.createNewNamingService(NacosServiceManager.java:99) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at com.alibaba.cloud.nacos.NacosServiceManager.buildNamingService(NacosServiceManager.java:90) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at com.alibaba.cloud.nacos.NacosServiceManager.getNamingService(NacosServiceManager.java:46) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:130) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.27.jar:5.3.27]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:937) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
-	at com.rmall.pay.PayApplication.main(PayApplication.java:14) ~[classes/:na]
-
-11:09:26:532  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Try to connect to server on start up, server: {serverIp = '192.168.93.133', server main port = 8848}
-11:09:29:538 ERROR 23304 --- [main] c.a.n.c.remote.client.grpc.GrpcClient    : Server check fail, please check server 192.168.93.133 ,port 9848 is available , error ={}
-
-java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 275400 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@53a16dd6[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@66abc325, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@39403943, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@1c5fd813}}}}}]]
-	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.start(RpcClient.java:390) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.start(NamingGrpcClientProxy.java:96) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.remote.gprc.NamingGrpcClientProxy.<init>(NamingGrpcClientProxy.java:89) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.remote.NamingClientProxyDelegate.<init>(NamingClientProxyDelegate.java:76) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.NacosNamingService.init(NacosNamingService.java:95) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.client.naming.NacosNamingService.<init>(NacosNamingService.java:81) ~[nacos-client-2.0.4.jar:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:na]
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490) ~[na:na]
-	at com.alibaba.nacos.api.naming.NamingFactory.createNamingService(NamingFactory.java:59) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.api.NacosFactory.createNamingService(NacosFactory.java:77) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.cloud.nacos.NacosServiceManager.createNewNamingService(NacosServiceManager.java:99) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at com.alibaba.cloud.nacos.NacosServiceManager.buildNamingService(NacosServiceManager.java:90) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at com.alibaba.cloud.nacos.NacosServiceManager.getNamingService(NacosServiceManager.java:46) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at com.alibaba.cloud.nacos.discovery.NacosWatch.start(NacosWatch.java:130) ~[spring-cloud-starter-alibaba-nacos-discovery-2021.0.4.0.jar:2021.0.4.0]
-	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:178) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:54) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:356) ~[spring-context-5.3.27.jar:5.3.27]
-	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
-	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:155) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:123) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:937) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:586) ~[spring-context-5.3.27.jar:5.3.27]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.12.jar:2.7.12]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.12.jar:2.7.12]
-	at com.rmall.pay.PayApplication.main(PayApplication.java:14) ~[classes/:na]
-
-11:09:29:542  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Try to connect to server on start up, server: {serverIp = '192.168.93.133', server main port = 8848}
-11:09:30:718  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Success to connect to server [192.168.93.133:8848] on start up, connectionId = 1743476971218_192.168.93.1_57456
-11:09:30:723  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Notify connected event to listeners.
-11:09:30:727  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
-11:09:30:729  INFO 23304 --- [main] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$979/0x00000008006db840
-11:09:30:955  INFO 23304 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8086 (http) with context path ''
-11:09:31:015  INFO 23304 --- [main] c.a.c.n.registry.NacosServiceRegistry    : nacos registry, DEFAULT_GROUP pay-service 192.168.48.1:8086 register finished
-11:09:31:374  INFO 23304 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Receive server push request, request = NotifySubscriberRequest, requestId = 25
-11:09:31:386  INFO 23304 --- [nacos-grpc-client-executor-8] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Ack server push request, request = NotifySubscriberRequest, requestId = 25
-11:09:34:287  INFO 23304 --- [main] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
-11:09:34:294  INFO 23304 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-11:09:34:313  INFO 23304 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-11:09:34:468  INFO 23304 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-11:09:35:564  INFO 23304 --- [main] com.rmall.pay.PayApplication             : Started PayApplication in 33.169 seconds (JVM running for 38.471)
-11:09:49:294  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Server healthy check fail, currentConnection = 1743476971218_192.168.93.1_57456
-11:09:49:300  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Try to reconnect to a new server, server is  not appointed, will choose a random server.
-11:09:52:319 ERROR 23304 --- [com.alibaba.nacos.client.remote.worker] c.a.n.c.remote.client.grpc.GrpcClient    : Server check fail, please check server 192.168.93.133 ,port 9848 is available , error ={}
-
-java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 3 milliseconds, 187000 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@78b9614[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@66abc325, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@39403943, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@1c5fd813}}}}}]]
-	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:522) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:370) ~[nacos-client-2.0.4.jar:na]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
+com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at com.alibaba.nacos.shaded.io.grpc.Status.asRuntimeException(Status.java:533) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$StreamObserverToCallListenerAdapter.onClose(ClientCalls.java:442) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl.closeObserver(ClientCallImpl.java:510) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl.access$300(ClientCallImpl.java:66) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.close(ClientCallImpl.java:630) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl.access$700(ClientCallImpl.java:518) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInternal(ClientCallImpl.java:692) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ClientCallImpl$ClientStreamListenerImpl$1StreamClosed.runInContext(ClientCallImpl.java:681) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.ContextRunnable.run(ContextRunnable.java:37) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.internal.SerializingExecutor.run(SerializingExecutor.java:123) ~[nacos-client-2.0.4.jar:na]
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
 	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
+Caused by: java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at java.base/sun.nio.ch.SocketDispatcher.read0(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:276) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:233) ~[na:na]
+	at java.base/sun.nio.ch.IOUtil.read(IOUtil.java:223) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:358) ~[na:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:247) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1140) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:347) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:148) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:697) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:549) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:511) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.concurrent.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[nacos-client-2.0.4.jar:na]
+	at com.alibaba.nacos.shaded.io.grpc.netty.shaded.io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[nacos-client-2.0.4.jar:na]
+	... 1 common frames omitted
 
-11:09:55:446 ERROR 23304 --- [com.alibaba.nacos.client.remote.worker] c.a.n.c.remote.client.grpc.GrpcClient    : Server check fail, please check server 192.168.93.133 ,port 9848 is available , error ={}
-
-java.util.concurrent.TimeoutException: Waited 3000 milliseconds (plus 3 milliseconds, 225800 nanoseconds delay) for com.alibaba.nacos.shaded.io.grpc.stub.ClientCalls$GrpcFuture@54b0b925[status=PENDING, info=[GrpcFuture{clientCall={delegate={delegate=ClientCallImpl{method=MethodDescriptor{fullMethodName=Request/request, type=UNARY, idempotent=false, safe=false, sampledToLocalTracing=true, requestMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@66abc325, responseMarshaller=com.alibaba.nacos.shaded.io.grpc.protobuf.lite.ProtoLiteUtils$MessageMarshaller@39403943, schemaDescriptor=com.alibaba.nacos.api.grpc.auto.RequestGrpc$RequestMethodDescriptorSupplier@1c5fd813}}}}}]]
-	at com.alibaba.nacos.shaded.com.google.common.util.concurrent.AbstractFuture.get(AbstractFuture.java:508) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.serverCheck(GrpcClient.java:148) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.grpc.GrpcClient.connectToServer(GrpcClient.java:264) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.reconnect(RpcClient.java:522) ~[nacos-client-2.0.4.jar:na]
-	at com.alibaba.nacos.common.remote.client.RpcClient.lambda$start$2(RpcClient.java:370) ~[nacos-client-2.0.4.jar:na]
-	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run$$$capture(FutureTask.java:264) ~[na:na]
-	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java) ~[na:na]
-	at java.base/java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:304) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128) ~[na:na]
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628) ~[na:na]
-	at java.base/java.lang.Thread.run(Thread.java:834) ~[na:na]
-
-11:09:55:451  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Fail to connect server, after trying 1 times, last try server is {serverIp = '192.168.93.133', server main port = 8848}, error = unknown
-11:09:58:041  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Success to connect a server [192.168.93.133:8848], connectionId = 1743476999022_192.168.93.1_57503
-11:09:58:042  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Abandon prev connection, server is 192.168.93.133:8848, connectionId is 1743476971218_192.168.93.1_57456
-11:09:58:043  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1743476971218_192.168.93.1_57456
-11:09:58:045  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Notify disconnected event to listeners
-11:09:58:048  INFO 23304 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Notify connected event to listeners.
-11:09:58:055  WARN 23304 --- [nacos-grpc-client-executor-18] c.a.n.c.remote.client.grpc.GrpcClient    : [1743476971218_192.168.93.1_57456]Ignore error event,isRunning:true,isAbandon=true
-11:10:00:942  INFO 23304 --- [nacos-grpc-client-executor-21] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Receive server push request, request = NotifySubscriberRequest, requestId = 32
-11:10:00:943  INFO 23304 --- [nacos-grpc-client-executor-21] com.alibaba.nacos.common.remote.client   : [45001896-7aeb-4994-bb83-f8ac65ad7cef] Ack server push request, request = NotifySubscriberRequest, requestId = 32
+03:19:46:733  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Server healthy check fail, currentConnection = 1753624894077_192.168.93.1_59131
+03:19:46:734  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+03:19:47:031  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Success to connect a server [192.168.93.133:8848], connectionId = 1753643986770_192.168.93.1_61485
+03:19:47:031  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Abandon prev connection, server is 192.168.93.133:8848, connectionId is 1753624894077_192.168.93.1_59131
+03:19:47:031  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1753624894077_192.168.93.1_59131
+03:19:47:032  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Try to reconnect to a new server, server is  not appointed, will choose a random server.
+03:19:47:032  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Notify disconnected event to listeners
+03:19:47:037  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Notify connected event to listeners.
+03:19:47:430  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Success to connect a server [192.168.93.133:8848], connectionId = 1753643987184_192.168.93.1_61486
+03:19:47:430  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Abandon prev connection, server is 192.168.93.133:8848, connectionId is 1753643986770_192.168.93.1_61485
+03:19:47:433  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : Close current connection 1753643986770_192.168.93.1_61485
+03:19:47:433  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Notify disconnected event to listeners
+03:19:47:434  INFO 17860 --- [com.alibaba.nacos.client.remote.worker] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Notify connected event to listeners.
+03:19:47:440  WARN 17860 --- [nacos-grpc-client-executor-19418] c.a.n.c.remote.client.grpc.GrpcClient    : [1753643986770_192.168.93.1_61485]Ignore error event,isRunning:true,isAbandon=true
+08:38:35:881  INFO 17860 --- [nacos-grpc-client-executor-19421] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Receive server push request, request = NotifySubscriberRequest, requestId = 604
+08:38:35:882  INFO 17860 --- [nacos-grpc-client-executor-19421] com.alibaba.nacos.common.remote.client   : [7b217d78-4d74-4c7b-a83a-70098109f056] Ack server push request, request = NotifySubscriberRequest, requestId = 604

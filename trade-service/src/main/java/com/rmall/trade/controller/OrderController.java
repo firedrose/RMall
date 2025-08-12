@@ -21,6 +21,7 @@ public class OrderController {
     @ApiOperation("根据id查询订单")
     @GetMapping("{id}")
     public OrderVO queryOrderById(@Param ("订单id")@PathVariable("id") Long orderId) {
+
         return BeanUtils.copyBean(orderService.getById(orderId), OrderVO.class);
     }
 

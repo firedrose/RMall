@@ -49,6 +49,9 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public void addItem2Cart(CartFormDTO cartFormDTO) {
         // 1.获取登录用户
+//        User user = lambdaQuery().eq(User::getUsername, username).one();
+//        UserContext.setUser(userId);
+
         Long userId = UserContext.getUser();
 
         // 2.判断是否已经存在
@@ -72,7 +75,7 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     @Override
     public List<CartVO> queryMyCarts() {
         // 1.查询我的购物车列表
-        List<Cart> carts = lambdaQuery().eq(Cart::getUserId,1L /* TODO UserContext.getUser()*/).list();
+        List<Cart> carts = lambdaQuery().eq(Cart::getUserId, UserContext.getUser()).list();
         if (CollUtils.isEmpty(carts)) {
             return CollUtils.emptyList();
         }
@@ -141,8 +144,10 @@ public class CartServiceImpl extends ServiceImpl<CartMapper, Cart> implements IC
     public void removeByItemIds(Collection<Long> itemIds) {
         // 1.构建删除条件，userId和itemId
         QueryWrapper<Cart> queryWrapper = new QueryWrapper<Cart>();
+        Long userID = UserContext.getUser();
+        System.out.println(userID);
         queryWrapper.lambda()
-                .eq(Cart::getUserId, UserContext.getUser())
+                .eq(Cart::getUserId,userID )
                 .in(Cart::getItemId, itemIds);
         // 2.删除
         remove(queryWrapper);

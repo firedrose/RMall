@@ -18,3 +18,26 @@ spring:
         uri: lb://user-service
         predicates:
           - Path=/users/**,/addresses/**
+      - id: cart-service
+        uri: lb://cart-service
+        predicates:
+          - Path=/carts/**
+      - id: trade-service
+        uri: lb://trade-service
+        predicates:
+          - Path=/orders/**
+      default-filters:
+        - AddRequestHeader=loveBlueSky,A few words of doubt cannot cool my enthusiasm
+        - MyPrintAny=1,2,3
+rm:
+  jwt:
+    location: classpath:rmall.jks
+    alias: hmall
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /search/**
+      - /users/login
+      - /items/**
+      - /hi

@@ -6,7 +6,7 @@ spring:
   profiles:
     active: rem
   datasource:
-    url: jdbc:mysql://${rm.db.host}:3306/rm-cart?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://${rm.db.host}:3307/rm-cart?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: ${rm.db.pw}

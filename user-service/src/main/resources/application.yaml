@@ -4,7 +4,7 @@ spring:
   application:
     name: user-service
   profiles:
-    active: dev
+    active: rem
   datasource:
     url: jdbc:mysql://${rm.db.host}:3307/rm-user?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver

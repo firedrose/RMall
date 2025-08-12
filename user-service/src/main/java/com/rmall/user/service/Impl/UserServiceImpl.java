@@ -25,7 +25,7 @@ import org.springframework.util.Assert;
  * 用户表 服务实现类
  * </p>
  *
- * @author 虎哥
+ * @author rose
  */
 @Slf4j
 @Service
@@ -45,6 +45,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         String password = loginDTO.getPassword();
         // 2.根据用户名或手机号查询
         User user = lambdaQuery().eq(User::getUsername, username).one();
+        Long userId = user.getId();
         Assert.notNull(user, "用户名错误");
         // 3.校验是否禁用
         if (user.getStatus() == UserStatus.FROZEN) {
@@ -58,7 +59,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         String token = jwtTool.createToken(user.getId(), jwtProperties.getTokenTTL());
         // 6.封装VO返回
         UserLoginVO vo = new UserLoginVO();
-        vo.setUserId(user.getId());
+        vo.setUserId(userId);
         vo.setUsername(user.getUsername());
         vo.setBalance(user.getBalance());
         vo.setToken(token);

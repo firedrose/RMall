@@ -33,7 +33,11 @@
             <version>1.6.6</version>
             <scope>compile</scope>
         </dependency>
-
+        <dependency>
+            <groupId>com.rose</groupId>
+            <artifactId>rm-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
 
     </dependencies>
 
