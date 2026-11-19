@@ -54,4 +54,5 @@ public class CartController {
     public void deleteCartItemByIds(@RequestParam("ids") List<Long> ids){
         cartService.removeByItemIds(ids);
     }
+  
 }
